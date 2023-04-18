@@ -2,39 +2,53 @@
 
 1.  ### Laravel Component
 
-    php artisan make:component Header
-    app/View/Components/Header.php -> header.blade.php -> RefreshController : The component is imported in welcome.php
+    <code>php artisan make:component Header</code>
+     <div>
+     app/View/Components/Header.php -> header.blade.php -> RefreshController : The component is imported in welcome.php
+     </div>
 
 2.  ### HttpRequests and form validation
 
-    HttpRequestsController -> httprequests.blade.php
+    <p>HttpRequestsController -> httprequests.blade.php</p>
 
 3.  ### Session
 
-    SessionController
-    Routes: Route::controller(SessionController::class)
+    <p>SessionController</p>
+    <p>Routes: Route::controller(SessionController::class)</p>
 
 4.  ### Middleware
 
-    php artisan make:middleware CheckUser
-    app/Http/middleware/CheckUser.php
-    function run before every request
-    registered in Kernel.php
+    <p> php artisan make:middleware CheckUser</p>
+    <p> app/Http/middleware/CheckUser.php</p>
+     <p>function run before every request</p>
+    <p>registered in Kernel.php</p>
 
              In Kernel.php
 
-    protected $middleware=[
-    register it here to apply it to all routes
-    ]
+    <div>
+    <pre>
+       protected $middleware=[
+       register it here to apply it to all routes
+       ]
 
-    protected $middlewareGroups=[
-    'web'=>[
-    register it here to apply it to all web routes
-    ],
-    'api'=>[
-    register it here to apply it to all api routes
-    ]
-    ]
-    protected $middlewareAliases= [
-    register it here to apply it to all routes
-    ]
+    </pre>
+    </div>
+    <div>
+    <pre>
+       protected $middlewareGroups=[
+        'web'=>[
+            register it here to apply it to all web routes
+           ],
+        'api'=>[
+           register it here to apply it to all api routes
+             ]
+             ]
+    </pre>
+    </div>
+    <div>
+    <pre>
+         protected $middlewareAliases= [
+         register it here to apply it to all routes
+         ]
+    </pre>
+    </div>
