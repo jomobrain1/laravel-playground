@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HttpRequestsController;
+use App\Http\Controllers\QueryBuilderController;
 use App\Http\Controllers\RefreshController;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
@@ -48,4 +49,17 @@ Route::controller(SessionController::class)
     Route::get("/set", "storeSessionData");
     Route::get("/delete", "deleteSessionData");
 
+});
+
+
+// Query Builder routes
+Route::controller(QueryBuilderController::class)
+->prefix("query")
+->group(function () {
+    Route::get("/posts", "index");
+    Route::post("/posts", "store")->name("store.posts");
+    Route::get("/post/{id}","single");
+    Route::post("/update-post","update")->name("update.post");
+    Route::get("delete-post/{id}","destroy");
+    
 });

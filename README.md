@@ -52,3 +52,9 @@
          ]
     </pre>
     </div>
+
+5.  ###  QueryBuilder
+
+      controller: QueryBuilderController
+      views: Query
+
