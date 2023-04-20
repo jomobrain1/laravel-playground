@@ -59,13 +59,18 @@
     views: Query
 
 6.  ### Join Clauses
+
     Table1: users ( <b>id , name, email,phone</b> )
     Table2: posts ( <b>id , title, body, user_id</b> )
 
     controller InnerJoinController
 
-7.  ### Seeding 
-     PostSeeder
-        php artisan db:seed
-        php artisan migrate:fresh --seed
-    
+7.  ### Seeding
+
+    PostSeeder
+    php artisan db:seed
+    php artisan migrate:fresh --seed
+
+8.  ### Blade Template Layout
+    BladeController
+    views: blade-templates

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BladeController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HttpRequestsController;
 use App\Http\Controllers\InnerJoinController;
@@ -59,10 +60,10 @@ Route::controller(QueryBuilderController::class)
 ->group(function () {
     Route::get("/posts", "index");
     Route::post("/posts", "store")->name("store.posts");
-    Route::get("/post/{id}","single");
-    Route::post("/update-post","update")->name("update.post");
-    Route::get("delete-post/{id}","destroy");
-    
+    Route::get("/post/{id}", "single");
+    Route::post("/update-post", "update")->name("update.post");
+    Route::get("delete-post/{id}", "destroy");
+
 });
 
 
@@ -73,5 +74,14 @@ Route::controller(InnerJoinController::class)
     Route::get("/inner-join", "innerJoinClause");
     Route::get("/left-join", "leftJoinClause");
     Route::get("/right-join", "rightJoinClause");
-    
+
+});
+
+// Blade template layouts
+Route::controller(BladeController::class)
+->prefix("blade")
+->group(function () {
+    Route::get("/about", "about");
+    Route::get("/contact", "contact");
+
 });
