@@ -8,6 +8,7 @@ use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\QueryBuilderController;
 use App\Http\Controllers\RefreshController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -89,3 +90,8 @@ Route::controller(BladeController::class)
 
 // Pagination
 Route::get("/paginate", [PaginationController::class,"posts"]);
+
+
+// File Upload
+Route::get("/upload", [UploadController::class,"index"]);
+Route::post("/upload", [UploadController::class,"upload"])->name("upload");

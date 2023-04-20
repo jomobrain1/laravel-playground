@@ -72,5 +72,15 @@
     php artisan migrate:fresh --seed
 
 8.  ### Blade Template Layout
+
     BladeController
     views: blade-templates
+
+9.  ### Pagination
+    PaginationController
+    view: paginate.blade.php
+
+10. ### FileUpload
+    UploadController
+    view: upload.blade.php
+    
