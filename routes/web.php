@@ -4,6 +4,7 @@ use App\Http\Controllers\BladeController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HttpRequestsController;
 use App\Http\Controllers\InnerJoinController;
+use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\QueryBuilderController;
 use App\Http\Controllers\RefreshController;
 use App\Http\Controllers\SessionController;
@@ -85,3 +86,6 @@ Route::controller(BladeController::class)
     Route::get("/contact", "contact");
 
 });
+
+// Pagination
+Route::get("/paginate", [PaginationController::class,"posts"]);
