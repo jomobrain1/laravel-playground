@@ -14,6 +14,7 @@
       
     </head>
     <body class="antialiased">
+       
        <x-header name="jomobrain1" :fruits="$fruits"/>
     </body>
 </html>

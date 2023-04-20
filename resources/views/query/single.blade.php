@@ -14,7 +14,7 @@
             color: aquamarine;
             padding: 10px 20px;
         }
-    </style>
+    </style>Downloads
 </head>
 <body>
     <h2>This is the Single File</h2>

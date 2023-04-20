@@ -53,8 +53,19 @@
     </pre>
     </div>
 
-5.  ###  QueryBuilder
+5.  ### QueryBuilder
 
-      controller: QueryBuilderController
-      views: Query
+    controller: QueryBuilderController
+    views: Query
 
+6.  ### Join Clauses
+    Table1: users ( <b>id , name, email,phone</b> )
+    Table2: posts ( <b>id , title, body, user_id</b> )
+
+    controller InnerJoinController
+
+7.  ### Seeding 
+     PostSeeder
+        php artisan db:seed
+        php artisan migrate:fresh --seed
+    

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HttpRequestsController;
+use App\Http\Controllers\InnerJoinController;
 use App\Http\Controllers\QueryBuilderController;
 use App\Http\Controllers\RefreshController;
 use App\Http\Controllers\SessionController;
@@ -61,5 +62,16 @@ Route::controller(QueryBuilderController::class)
     Route::get("/post/{id}","single");
     Route::post("/update-post","update")->name("update.post");
     Route::get("delete-post/{id}","destroy");
+    
+});
+
+
+// Joins
+Route::controller(InnerJoinController::class)
+->prefix("joins")
+->group(function () {
+    Route::get("/inner-join", "innerJoinClause");
+    Route::get("/left-join", "leftJoinClause");
+    Route::get("/right-join", "rightJoinClause");
     
 });
